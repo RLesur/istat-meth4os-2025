@@ -1,43 +1,32 @@
 ---
 title: Open-source Software for the Implementation of New Statistical Methods
-author: Romain Lesur
+subtitle: "**4^th^ Workshop on Methodologies for Official Statistics**"
+#author: Romain Lesur
 date: 2025-12-02
-slide-number: true
-footer: |
-  **4^th^ Workshop on Methodologies for Official Statistics**
+date-format: "DD/MM/YYYY"
+slide-number: false
 # uncomment for French presentations:
-#lang: fr
+# lang: fr
 # for blind readers:
 slide-tone: false
-# for @olevitt:
-chalkboard: # press the B key to toggle chalkboard
-  theme: whiteboard
-# uncomment to use the multiplex mode:
-#multiplex: true
-format:
-  # pick the light mode (onyxia-revealjs) or the dark mode (onyxia-dark-revealjs)
-  onyxia-revealjs:
-  #onyxia-dark-revealjs:
-    output-file: index.html
+chalkboard: false
+jump-to-slide: true #press "g" to jump and the number of slide
+mouse-wheel: false
+transition: none
+multiplex: false
+embed-resources: false
+custom-toc: true
+
 # visual editor configuration:
 editor:
   render-on-save: true
 ---
 
-## Outline
+# Insee's Journey Towards Adopting Open-Source {.backgroundTitre_bleu}
 
-- Insee's journey to open-source adoption
-- Open-source adoption motivators
-- The main challenge we faced
-- The challenges we're still facing
+## Diffusion of Innovations {.backgroundStandard_bleu}
 
-Find these slides: <https://rlesur.github.io/istat-meth4os-2025>
-
-License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
-
-## Insee's journey to open-source adoption
-
-Diffusion of Innovations (Rogers, 1962)
+Rogers, 1962
 
 ::: {.r-stack .r-stretch}
 
@@ -45,9 +34,9 @@ Diffusion of Innovations (Rogers, 1962)
 
 :::
 
-## Insee's journey to open-source adoption
+## Diffusion of Open-Source in INSEE {.backgroundStandard}
 
-R adoption at INSEE (France): 1500 statisticians
+R adoption at INSEE: 1500 statisticians
 
 ::: {.r-stack .r-stretch}
 
@@ -55,46 +44,66 @@ R adoption at INSEE (France): 1500 statisticians
 
 :::
 
-## Innovators' motivators
+## An Effective Decrease of SAS Users {.backgroundStandard}
 
-::: incremental
+::: {.r-stack .r-stretch}
 
-- **~2000-2012** Innovators' motivators:
-  * graphical capabilities (`lattice`)
-  * literate programming (`Sweave()`)
-  * spatial data analysis (`sp`)
+![Number of SAS users at INSEE](img/sas_users_insee.png)
 
 :::
 
-## From Innovators to Early Adopters
+## Open-Source Languages Adoption {.backgroundStandard}
 
-::: incremental
+::: {.r-stack .r-stretch}
+
+![Relative use of languages at INSEE](img/languages_insee.png)
+
+:::
+
+# Open-Source Adoption Motivators {.backgroundTitre_violet}
+
+## Innovators' Motivators {.backgroundStandard_violet}
+
+::: {.incremental .large}
+
+**~2000-2012**:
+
+- R graphical capabilities (`lattice`)
+- Literate programming with R (`Sweave()`)
+- Spatial data analysis using R (`sp`)
+
+:::
+
+## From Innovators to Early Adopters {.backgroundStandard}
+
+::: {.incremental .large}
 
 **2012**:
 
-- first R user group in Paris ([FL\\tauR](https://fltaur.wordpress.com/))
-- the use of R officially recognized internally
-- first RStudio server
+- First R user group in Paris ([FL\\tauR](https://fltaur.wordpress.com/))
+- The use of R officially recognized internally
+- First RStudio server
 
 :::
 
-## Early Adopters' Motivators
+## Early Adopters' Motivators {.backgroundStandard}
 
-::: incremental
+::: {.incremental .large}
 
-- **2012-2018** Early adopters' motivators
-  * RStudio IDE
-  * graphical capabilities (`ggplot2`)
-  * literate programming (`knitr`, `rmarkdown`)
-  * dataviz web applications (`shiny`)
-  * data wrangling (`tidyverse`, `data.table`)
-  * first packages released on CRAN (`icarus`, `btb`, `gustave`)
+**2012-2018**:
+
+- RStudio IDE
+- Graphical capabilities (`ggplot2`)
+- Literate programming (`knitr`, `rmarkdown`)
+- Dataviz web applications (`shiny`)
+- Data wrangling (`tidyverse`, `data.table`)
+- First packages released on CRAN (`icarus`, `btb`, `gustave`)
 
 :::
 
-## Getting the Early Majority
+## Getting the Early Majority {.backgroundStandard}
 
-::: incremental
+::: {.incremental .large}
 
 - **2018**: all open source languages officially recognized
 - **2018-2022**: a collective skills upgrade
@@ -105,62 +114,51 @@ R adoption at INSEE (France): 1500 statisticians
 
 :::
 
-## Moving away from proprietary languages
+## Moving away from proprietary languages {.backgroundStandard}
 
-::: incremental
+::: {.incremental .large}
 
-- **2022**: 
-  * 50% of the statistical scripts already been rewritten in R (voluntary initiatives)
-  * decision to use only open source languages from 2026 onwards (motivated by the increase in licensing costs)
-  * new internal environment for statisticians and data scientists based on [Onyxia](https://onyxia.sh) (vendor lock-ins have moved from languages to platforms)
-  * `parquet` files to store and disseminate data (preference for a cross language file format)
+**2022**: 
 
-:::
-
-## From early majority to full adoption
-
-::: incremental
-
-- **2022-2026**:
-  * mass trainings for late majority and laggards
-  * new trainings on [Good Practices with git and R](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/), [Bringing Data Science Projects into Production](https://ensae-reproductibilite.github.io/website/)
-  * an active community helping each other
-  * rewriting of the remaining codes (thanks to ChatGPT for helping us understand SAS programs)
+- 50% of the statistical scripts already been rewritten in R (voluntary initiatives)
+- decision to use only open source languages from 2026 onwards (motivated by the increase in licensing costs)
+- new internal environment for statisticians and data scientists based on [Onyxia](https://onyxia.sh) (vendor lock-ins have moved from languages to platforms)
+- `parquet` files to store and disseminate data (preference for a cross language file format)
 
 :::
 
-## An effective decrease of SAS users
+## From early majority to full adoption {.backgroundStandard}
 
-::: {.r-stack .r-stretch}
+::: {.incremental .large}
 
-![Number of SAS users at INSEE](img/sas_users_insee.png)
+**2022-2025**:
+
+- mass trainings for late majority and laggards
+- new trainings on [Good Practices with git and R](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/), [Bringing Data Science Projects into Production](https://ensae-reproductibilite.github.io/website/)
+- an active community helping each other
+- rewriting of the remaining codes (thanks to ChatGPT for helping us understand SAS programs)
+- soft shutdown of SAS servers (09/2025)
+- hard shutdown of SAS servers (24/12/2025)
 
 :::
 
-## Open-source languages adoption
 
-::: {.r-stack .r-stretch}
+# The Main Challenge of Open-Source Adoption {.backgroundTitre_jaune}
 
-![Relative use of languages at INSEE](img/languages_insee.png)
+## Lack of alignment between IT and statisticians {.backgroundStandard_jaune}
 
-:::
-
-## The main challenge we faced
-
-. . .
-
-### Lack of alignment between IT and statisticians
-
-::: incremental
+::: {.incremental .large}
 
 - IT teams are risk averse: they are paid to provide **stable** IT environments
-- providing a working environment for R and python users is challenging: open source languages are **unstable** by nature
+- Providing a working environment for R and python users is challenging: open source languages are **unstable** by nature
 - R/python users need flexibility and IT need stability  
   **Can we find a way out?**
 
 :::
 
-## Tips for dealing with IT
+## Tips for dealing with IT {.backgroundStandard}
+
+:::: large
 
 Dean Marchiori's post: ["_5 tips for dealing with IT_"](https://www.deanmarchiori.com/posts/2024-11-18-dealing-with-it/)
 
@@ -174,7 +172,11 @@ Dean Marchiori's post: ["_5 tips for dealing with IT_"](https://www.deanmarchior
 
 :::
 
-## Tips for dealing with IT
+::::
+
+## Tips for dealing with IT {.backgroundStandard}
+
+:::: large
 
 Dean Marchiori's post: ["_5 tips for dealing with IT_"](https://www.deanmarchiori.com/posts/2024-11-18-dealing-with-it/):
 
@@ -182,11 +184,13 @@ Dean Marchiori's post: ["_5 tips for dealing with IT_"](https://www.deanmarchior
 - **Political alignment**: convince your manager to help you with IT
 - **Find supporters in IT**
 - **Find (safe) workaround**: there is always a grey area between what is allowed and what is not 
-- **~~Buy commercially licensed software~~** **[not always necessary]{.orange}** 
+- ~~**Buy commercially licensed software**~~ **[not always necessary]{.orange}** 
 
-## How did we align IT and statisticians?
+::::
 
-::: incremental
+## How did we align IT and statisticians? {.backgroundStandard}
+
+::: {.incremental .large}
 
 - Political alignment: creation of an innovation team in the IT Department (2018)
 - Mutual empathy between IT innovation team and statisticians
@@ -195,7 +199,9 @@ Dean Marchiori's post: ["_5 tips for dealing with IT_"](https://www.deanmarchior
 
 :::
 
-## Towards a new deal between IT and statisticians
+## Towards a new deal between IT and statisticians {.backgroundStandard}
+
+::: large
 
 An official statistical office is a socio-technical system. We need:
 
@@ -205,13 +211,15 @@ An official statistical office is a socio-technical system. We need:
 - software
 - law and regulations
 
-## The technology that opened us new horizons
+:::
+
+## The technology that opened us new horizons {.backgroundStandard}
 
 ![](img/containers.jpg){.r-stretch fig-align="center"}
 
-## The benefits of containers
+## The benefits of containers {.backgroundStandard}
 
-::: incremental
+::: {.incremental .large}
 
 - From the outside, they are all identical: IT teams can learn to manage them routinely
 - Inside, you can put what you want (any R version, R packages, system dependencies...)
@@ -220,9 +228,9 @@ An official statistical office is a socio-technical system. We need:
 
 :::
 
-## A new deal between IT and statisticians {.smaller}
+## A new deal between IT and statisticians {.backgroundStandard}
 
-::: incremental
+::: {.incremental .large}
 
 - IT cares about containers orchestration and possible vulnerabilities inside them
 - IT offers a flexible container based platform (many versions of R, python, IDEs...) and offers support
@@ -234,9 +242,9 @@ An official statistical office is a socio-technical system. We need:
 
 :::
 
-## The modern statistician: a proposal
+## The modern statistician: a proposal {.backgroundStandard}
 
-::: incremental
+::: {.incremental .large}
 
 - Uses open source languages
 - Adopts good practices for software development (version control, modular code, tests)
@@ -248,19 +256,21 @@ An official statistical office is a socio-technical system. We need:
 
 :::
 
-## The challenges we are still facing
+# The Remaining Challenges {.backgroundTitre_vert}
 
-A wall of confusion between statisticians:
+## A wall of confusion between statisticians {.backgroundStandard_jaune}
 
-::: incremental
+::: {.incremental .large}
 
-  * some statisticians (mostly managers) see R a new statistical "tool". _They focus on the product, not the process_ (see Sandra's keynote).
+  * some statisticians (mostly managers) see R a new statistical "tool". _They focus on the product, not the process_
   * other statisticians (mostly the younger ones) see R as a programming language and recognize themselves as developers. _They care about the process_
   * mass trainings on [Good Practices with git and R](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/) for both R users and managers
 
 :::
 
-## The challenges we are still facing
+## The missing knowledge of statisticians in computer science {.backgroundStandard}
+
+:::: large
 
 Statistical trainings in university lack solid basis in computer science:
 
@@ -272,13 +282,35 @@ Statistical trainings in university lack solid basis in computer science:
 
 :::
 
-## Conclusion
+::::
 
-- Create a community of R users
+# Take-Away Messages {.backgroundTitre_bleu}
+
+## Take-Away Messages {.backgroundStandard_bleu .titreTransparent data-menu-title="Take-away messages"}
+
+:::{.listeSansPuceNiveau1 .large}
+
+- Create a community of open-source users
 - Invest in mass trainings
 - Invest in your IT department
 - IT must consider statisticians as (citizen) developers
 - Statisticians must also be trained in computer science
 - Don't forget to train the middle management
 
-# Thanks! Questions?
+:::
+
+## {#pageDeFin data-menu-title="Page finale" .unnumbered .backgroundPageFinale}
+
+:::: {.columns .coordonneesFinales}
+
+::: {.column .coordonnees width=50%}
+- Romain Lesur
+- Head of Data Science Lab
+- <romain.lesur@insee.fr>
+:::
+
+::: {.column .droite width=40%}
+:::
+
+::::
+
