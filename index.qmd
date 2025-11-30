@@ -129,6 +129,22 @@ R adoption at INSEE (France): 1500 statisticians
 
 :::
 
+## An effective decrease of SAS users
+
+::: {.r-stack .r-stretch}
+
+![Number of SAS users at INSEE](img/sas_users_insee.png)
+
+:::
+
+## Use of languages
+
+::: {.r-stack .r-stretch}
+
+![Relative use of languages at INSEE](img/languages_insee.png)
+
+:::
+
 ## The main challenge we faced
 
 . . .
