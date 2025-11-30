@@ -12,7 +12,7 @@ slide-tone: false
 chalkboard: false
 jump-to-slide: true #press "g" to jump and the number of slide
 mouse-wheel: false
-transition: slide
+transition: none
 multiplex: false
 embed-resources: false
 custom-toc: true
@@ -288,7 +288,7 @@ Statistical trainings in university lack solid basis in computer science:
 
 ## Take-Away Messages {.backgroundStandard_bleu .titreTransparent data-menu-title="Take-away messages"}
 
-::: large
+:::{.listeSansPuceNiveau1 .large}
 
 - Create a community of open-source users
 - Invest in mass trainings
