@@ -137,7 +137,7 @@ R adoption at INSEE (France): 1500 statisticians
 
 :::
 
-## Use of languages
+## Open-source languages adoption
 
 ::: {.r-stack .r-stretch}
 
