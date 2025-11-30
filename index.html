@@ -6,11 +6,10 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ac1a48248070c8bfbae4244efd7728e4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
-  <meta name="author" content="Romain Lesur">
-  <meta name="dcterms.date" content="2025-12-02">
+  <meta name="dcterms.date" content="2025-02-12">
   <title>Open-source Software for the Implementation of New Statistical Methods</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,13 +29,16 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-ea8535d309a38c52e88d69daf30b07d0.css">
-  <link rel="stylesheet" href="_extensions/InseeFrLab/onyxia/logo.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c8e5d5451a05bbc815d1dea20b36a345.css">
+  <link rel="stylesheet" href="css/insee_clair.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/stylePerso.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/multimodal/multimodal.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -125,82 +127,139 @@
       margin-right: 0; 
     }
   </style>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="_extensions/insee-clair/ressources/revealJs/insee_embleme_couleurs_RVB.svg">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="_extensions/insee-clair/ressources/revealJs/1_Template-INSEE-Clair_premiere-page.svg" data-background-opacity="1" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Open-source Software for the Implementation of New Statistical Methods</h1>
+  <p class="subtitle"><strong>4<sup>th</sup> Workshop on Methodologies for Official Statistics</strong></p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Romain Lesur 
-</div>
-</div>
 </div>
 
-  <p class="date">2025-12-02</p>
+  <p class="date">02/12/2025</p>
 </section>
-<section id="outline" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Outline</h2>
-<ul>
-<li>Insee’s journey to open-source adoption</li>
-<li>Open-source adoption motivators</li>
-<li>The main challenge we faced</li>
-<li>The challenges we’re still facing</li>
-</ul>
-<p>Find these slides: <a href="https://rlesur.github.io/istat-meth4os-2025" class="uri">https://rlesur.github.io/istat-meth4os-2025</a></p>
-<p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">CC BY-SA 4.0</a></p>
+<section class="slide level2">
+
+<!-- _extensions/mon-extension/toc-slide.html -->
+<section id="custom-toc-slide">
+  <h2>Outline</h2>
+  <div class="toc-cards"><div class="toc-card level-1"><a href="#/insees-journey-towards-adopting-open-source"><p class="card-number card-number-01">01</p><p></p><p class="card-title">Insee’s Journey Towards Adopting Open-Source</p></a></div>
+<div class="toc-card level-1"><a href="#/open-source-adoption-motivators"><p class="card-number card-number-02">02</p><p></p><p class="card-title">Open-Source Adoption Motivators</p></a></div>
+<div class="toc-card level-1"><a href="#/the-main-challenge-of-open-source-adoption"><p class="card-number card-number-03">03</p><p></p><p class="card-title">The Main Challenge of Open-Source Adoption</p></a></div>
+<div class="toc-card level-1"><a href="#/the-remaining-challenges"><p class="card-number card-number-04">04</p><p></p><p class="card-title">The Remaining Challenges</p></a></div>
+<div class="toc-card level-1"><a href="#/take-away-messages"><p class="card-number card-number-05">05</p><p></p><p class="card-title">Take-Away Messages</p></a></div></div>
 </section>
-<section id="insees-journey-to-open-source-adoption" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Insee’s journey to open-source adoption</h2>
-<p>Diffusion of Innovations (Rogers, 1962)</p>
+<!-- _extensions/mon-extension/toc-style.html -->
+<style>
+  #custom-toc-slide {
+    text-align: center;
+  }
+  .toc-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .toc-card {
+    flex: 0 0 calc(20% - 1rem); /* 5 cartes par ligne */
+/*    background: #f8f9fa;*/
+    background: none;
+    border-radius: 8px;
+    padding: 1rem;
+/*    box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .toc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .toc-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  @media (max-width: 1200px) { .toc-card { flex: 0 0 calc(25% - 1rem); } }
+  @media (max-width: 900px)  { .toc-card { flex: 0 0 calc(33% - 1rem); } }
+  @media (max-width: 600px)  { .toc-card { flex: 0 0 calc(50% - 1rem); } }
+  
+  
+
+  
+</style>
+
+</section>
+<section>
+<section id="insees-journey-towards-adopting-open-source" class="title-slide slide level1 backgroundTitre_bleu center" data-number="1">
+<h1><span class="header-section-number">1</span> Insee’s Journey Towards Adopting Open-Source</h1>
+
+</section>
+<section id="diffusion-of-innovations" class="slide level2 backgroundStandard_bleu" data-number="1.1">
+<h2><span class="header-section-number">1.1</span> Diffusion of Innovations</h2>
+<p>Rogers, 1962</p>
 
 <img data-src="img/DiffusionOfInnovation.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://commons.wikimedia.org/wiki/File:DiffusionOfInnovation.png">Wikimedia Commons</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed">CC BY-SA 3.0 Unported</a></p></section>
-<section id="insees-journey-to-open-source-adoption-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Insee’s journey to open-source adoption</h2>
-<p>R adoption at INSEE (France): 1500 statisticians</p>
+<section id="diffusion-of-open-source-in-insee" class="slide level2 backgroundStandard" data-number="1.2">
+<h2><span class="header-section-number">1.2</span> Diffusion of Open-Source in INSEE</h2>
+<p>R adoption at INSEE: 1500 statisticians</p>
 
 <img data-src="img/DiffusionOfInnovationTimeline.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://commons.wikimedia.org/wiki/File:DiffusionOfInnovation.png">Wikimedia Commons</a> modified by author, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">CC BY-SA 4.0</a></p></section>
-<section id="innovators-motivators" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Innovators’ motivators</h2>
-<ul>
-<li class="fragment"><strong>~2000-2012</strong> Innovators’ motivators:
-<ul>
-<li class="fragment">graphical capabilities (<code>lattice</code>)</li>
-<li class="fragment">literate programming (<code>Sweave()</code>)</li>
-<li class="fragment">spatial data analysis (<code>sp</code>)</li>
-</ul></li>
-</ul>
+<section id="an-effective-decrease-of-sas-users" class="slide level2 backgroundStandard" data-number="1.3">
+<h2><span class="header-section-number">1.3</span> An Effective Decrease of SAS Users</h2>
+
+<img data-src="img/sas_users_insee.png" class="r-stretch quarto-figure-center"><p class="caption">Number of SAS users at INSEE</p></section>
+<section id="open-source-languages-adoption" class="slide level2 backgroundStandard" data-number="1.4">
+<h2><span class="header-section-number">1.4</span> Open-Source Languages Adoption</h2>
+
+<img data-src="img/languages_insee.png" class="r-stretch quarto-figure-center"><p class="caption">Relative use of languages at INSEE</p></section></section>
+<section>
+<section id="open-source-adoption-motivators" class="title-slide slide level1 backgroundTitre_violet center" data-number="2">
+<h1><span class="header-section-number">2</span> Open-Source Adoption Motivators</h1>
+
 </section>
-<section id="from-innovators-to-early-adopters" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>From Innovators to Early Adopters</h2>
+<section id="innovators-motivators" class="slide level2 backgroundStandard_violet" data-number="2.1">
+<h2><span class="header-section-number">2.1</span> Innovators’ Motivators</h2>
+<div class="large">
+<p><strong>~2000-2012</strong>:</p>
+<ul>
+<li class="fragment">R graphical capabilities (<code>lattice</code>)</li>
+<li class="fragment">Literate programming with R (<code>Sweave()</code>)</li>
+<li class="fragment">Spatial data analysis using R (<code>sp</code>)</li>
+</ul>
+</div>
+</section>
+<section id="from-innovators-to-early-adopters" class="slide level2 backgroundStandard" data-number="2.2">
+<h2><span class="header-section-number">2.2</span> From Innovators to Early Adopters</h2>
+<div class="large">
 <p><strong>2012</strong>:</p>
 <ul>
-<li class="fragment">first R user group in Paris (<a href="https://fltaur.wordpress.com/">FL\tauR</a>)</li>
-<li class="fragment">the use of R officially recognized internally</li>
-<li class="fragment">first RStudio server</li>
+<li class="fragment">First R user group in Paris (<a href="https://fltaur.wordpress.com/">FL\tauR</a>)</li>
+<li class="fragment">The use of R officially recognized internally</li>
+<li class="fragment">First RStudio server</li>
 </ul>
+</div>
 </section>
-<section id="early-adopters-motivators" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Early Adopters’ Motivators</h2>
-<ul>
-<li class="fragment"><strong>2012-2018</strong> Early adopters’ motivators
+<section id="early-adopters-motivators" class="slide level2 backgroundStandard" data-number="2.3">
+<h2><span class="header-section-number">2.3</span> Early Adopters’ Motivators</h2>
+<div class="large">
+<p><strong>2012-2018</strong>:</p>
 <ul>
 <li class="fragment">RStudio IDE</li>
-<li class="fragment">graphical capabilities (<code>ggplot2</code>)</li>
-<li class="fragment">literate programming (<code>knitr</code>, <code>rmarkdown</code>)</li>
-<li class="fragment">dataviz web applications (<code>shiny</code>)</li>
-<li class="fragment">data wrangling (<code>tidyverse</code>, <code>data.table</code>)</li>
-<li class="fragment">first packages released on CRAN (<code>icarus</code>, <code>btb</code>, <code>gustave</code>)</li>
-</ul></li>
+<li class="fragment">Graphical capabilities (<code>ggplot2</code>)</li>
+<li class="fragment">Literate programming (<code>knitr</code>, <code>rmarkdown</code>)</li>
+<li class="fragment">Dataviz web applications (<code>shiny</code>)</li>
+<li class="fragment">Data wrangling (<code>tidyverse</code>, <code>data.table</code>)</li>
+<li class="fragment">First packages released on CRAN (<code>icarus</code>, <code>btb</code>, <code>gustave</code>)</li>
 </ul>
+</div>
 </section>
-<section id="getting-the-early-majority" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Getting the Early Majority</h2>
+<section id="getting-the-early-majority" class="slide level2 backgroundStandard" data-number="2.4">
+<h2><span class="header-section-number">2.4</span> Getting the Early Majority</h2>
+<div class="large">
 <ul>
 <li class="fragment"><strong>2018</strong>: all open source languages officially recognized</li>
 <li class="fragment"><strong>2018-2022</strong>: a collective skills upgrade
@@ -211,53 +270,53 @@ Romain Lesur
 <li class="fragment">prototyping a new working environment for data science: an open source cloud based datalab (<a href="https://onyxia.sh">Onyxia</a>)</li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="moving-away-from-proprietary-languages" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Moving away from proprietary languages</h2>
-<ul>
-<li class="fragment"><strong>2022</strong>:
+<section id="moving-away-from-proprietary-languages" class="slide level2 backgroundStandard" data-number="2.5">
+<h2><span class="header-section-number">2.5</span> Moving away from proprietary languages</h2>
+<div class="large">
+<p><strong>2022</strong>:</p>
 <ul>
 <li class="fragment">50% of the statistical scripts already been rewritten in R (voluntary initiatives)</li>
 <li class="fragment">decision to use only open source languages from 2026 onwards (motivated by the increase in licensing costs)</li>
 <li class="fragment">new internal environment for statisticians and data scientists based on <a href="https://onyxia.sh">Onyxia</a> (vendor lock-ins have moved from languages to platforms)</li>
 <li class="fragment"><code>parquet</code> files to store and disseminate data (preference for a cross language file format)</li>
-</ul></li>
 </ul>
+</div>
 </section>
-<section id="from-early-majority-to-full-adoption" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>From early majority to full adoption</h2>
-<ul>
-<li class="fragment"><strong>2022-2026</strong>:
+<section id="from-early-majority-to-full-adoption" class="slide level2 backgroundStandard" data-number="2.6">
+<h2><span class="header-section-number">2.6</span> From early majority to full adoption</h2>
+<div class="large">
+<p><strong>2022-2025</strong>:</p>
 <ul>
 <li class="fragment">mass trainings for late majority and laggards</li>
 <li class="fragment">new trainings on <a href="https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/">Good Practices with git and R</a>, <a href="https://ensae-reproductibilite.github.io/website/">Bringing Data Science Projects into Production</a></li>
 <li class="fragment">an active community helping each other</li>
 <li class="fragment">rewriting of the remaining codes (thanks to ChatGPT for helping us understand SAS programs)</li>
-</ul></li>
+<li class="fragment">soft shutdown of SAS servers (09/2025)</li>
+<li class="fragment">hard shutdown of SAS servers (24/12/2025)</li>
 </ul>
+</div>
+</section></section>
+<section>
+<section id="the-main-challenge-of-open-source-adoption" class="title-slide slide level1 backgroundTitre_jaune center" data-number="3">
+<h1><span class="header-section-number">3</span> The Main Challenge of Open-Source Adoption</h1>
+
 </section>
-<section id="an-effective-decrease-of-sas-users" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>An effective decrease of SAS users</h2>
-
-<img data-src="img/sas_users_insee.png" class="r-stretch quarto-figure-center"><p class="caption">Number of SAS users at INSEE</p></section>
-<section id="open-source-languages-adoption" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Open-source languages adoption</h2>
-
-<img data-src="img/languages_insee.png" class="r-stretch quarto-figure-center"><p class="caption">Relative use of languages at INSEE</p></section>
-<section id="the-main-challenge-we-faced" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>The main challenge we faced</h2>
-<div class="fragment">
-<h3 data-background-image="background.svg" data-background-size="contain" id="lack-of-alignment-between-it-and-statisticians">Lack of alignment between IT and statisticians</h3>
+<section id="lack-of-alignment-between-it-and-statisticians" class="slide level2 backgroundStandard_jaune" data-number="3.1">
+<h2><span class="header-section-number">3.1</span> Lack of alignment between IT and statisticians</h2>
+<div class="large">
 <ul>
 <li class="fragment">IT teams are risk averse: they are paid to provide <strong>stable</strong> IT environments</li>
-<li class="fragment">providing a working environment for R and python users is challenging: open source languages are <strong>unstable</strong> by nature</li>
+<li class="fragment">Providing a working environment for R and python users is challenging: open source languages are <strong>unstable</strong> by nature</li>
 <li class="fragment">R/python users need flexibility and IT need stability<br>
 <strong>Can we find a way out?</strong></li>
 </ul>
 </div>
 </section>
-<section id="tips-for-dealing-with-it" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Tips for dealing with IT</h2>
+<section id="tips-for-dealing-with-it" class="slide level2 backgroundStandard" data-number="3.2">
+<h2><span class="header-section-number">3.2</span> Tips for dealing with IT</h2>
+<div class="large">
 <p>Dean Marchiori’s post: <a href="https://www.deanmarchiori.com/posts/2024-11-18-dealing-with-it/">“<em>5 tips for dealing with IT</em>”</a></p>
 <ul>
 <li class="fragment"><strong>Have empathy</strong>: understand them and what they’re facing</li>
@@ -266,29 +325,35 @@ Romain Lesur
 <li class="fragment"><strong>Find (safe) workaround</strong>: there is always a grey area between what is allowed and what is not</li>
 <li class="fragment"><strong>Buy commercially licensed software</strong></li>
 </ul>
+</div>
 </section>
-<section id="tips-for-dealing-with-it-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Tips for dealing with IT</h2>
+<section id="tips-for-dealing-with-it-1" class="slide level2 backgroundStandard" data-number="3.3">
+<h2><span class="header-section-number">3.3</span> Tips for dealing with IT</h2>
+<div class="large">
 <p>Dean Marchiori’s post: <a href="https://www.deanmarchiori.com/posts/2024-11-18-dealing-with-it/">“<em>5 tips for dealing with IT</em>”</a>:</p>
 <ul>
 <li><strong>Have empathy</strong>: understand them and what they’re facing</li>
 <li><strong>Political alignment</strong>: convince your manager to help you with IT</li>
 <li><strong>Find supporters in IT</strong></li>
 <li><strong>Find (safe) workaround</strong>: there is always a grey area between what is allowed and what is not</li>
-<li><strong><del>Buy commercially licensed software</del></strong> <strong><span class="orange">not always necessary</span></strong></li>
+<li><del><strong>Buy commercially licensed software</strong></del> <strong><span class="orange">not always necessary</span></strong></li>
 </ul>
+</div>
 </section>
-<section id="how-did-we-align-it-and-statisticians" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>How did we align IT and statisticians?</h2>
+<section id="how-did-we-align-it-and-statisticians" class="slide level2 backgroundStandard" data-number="3.4">
+<h2><span class="header-section-number">3.4</span> How did we align IT and statisticians?</h2>
+<div class="large">
 <ul>
 <li class="fragment">Political alignment: creation of an innovation team in the IT Department (2018)</li>
 <li class="fragment">Mutual empathy between IT innovation team and statisticians</li>
 <li class="fragment">Statisticians’ most valuable supporters</li>
 <li class="fragment">Create workarounds for statisticians: <a href="https://datalab.sspcloud.fr">sspcloud.fr</a></li>
 </ul>
+</div>
 </section>
-<section id="towards-a-new-deal-between-it-and-statisticians" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Towards a new deal between IT and statisticians</h2>
+<section id="towards-a-new-deal-between-it-and-statisticians" class="slide level2 backgroundStandard" data-number="3.5">
+<h2><span class="header-section-number">3.5</span> Towards a new deal between IT and statisticians</h2>
+<div class="large">
 <p>An official statistical office is a socio-technical system. We need:</p>
 <ul>
 <li>people (business units, methods, IT)</li>
@@ -297,22 +362,26 @@ Romain Lesur
 <li>software</li>
 <li>law and regulations</li>
 </ul>
+</div>
 </section>
-<section id="the-technology-that-opened-us-new-horizons" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>The technology that opened us new horizons</h2>
+<section id="the-technology-that-opened-us-new-horizons" class="slide level2 backgroundStandard" data-number="3.6">
+<h2><span class="header-section-number">3.6</span> The technology that opened us new horizons</h2>
 
 <img data-src="img/containers.jpg" class="r-stretch quarto-figure quarto-figure-center"></section>
-<section id="the-benefits-of-containers" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>The benefits of containers</h2>
+<section id="the-benefits-of-containers" class="slide level2 backgroundStandard" data-number="3.7">
+<h2><span class="header-section-number">3.7</span> The benefits of containers</h2>
+<div class="large">
 <ul>
 <li class="fragment">From the outside, they are all identical: IT teams can learn to manage them routinely</li>
 <li class="fragment">Inside, you can put what you want (any R version, R packages, system dependencies…)</li>
 <li class="fragment">Containers are now the basis of all data platforms: IT in official statistics offices <strong>must</strong> learn to deal with them</li>
 <li class="fragment">Containers also used in DevOps platforms</li>
 </ul>
+</div>
 </section>
-<section id="a-new-deal-between-it-and-statisticians" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>A new deal between IT and statisticians</h2>
+<section id="a-new-deal-between-it-and-statisticians" class="slide level2 backgroundStandard" data-number="3.8">
+<h2><span class="header-section-number">3.8</span> A new deal between IT and statisticians</h2>
+<div class="large">
 <ul>
 <li class="fragment">IT cares about containers orchestration and possible vulnerabilities inside them</li>
 <li class="fragment">IT offers a flexible container based platform (many versions of R, python, IDEs…) and offers support</li>
@@ -324,9 +393,11 @@ Romain Lesur
 </ul></li>
 <li class="fragment">The DevOps principle applies: <strong>“You build it, you run it”</strong></li>
 </ul>
+</div>
 </section>
-<section id="the-modern-statistician-a-proposal" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>The modern statistician: a proposal</h2>
+<section id="the-modern-statistician-a-proposal" class="slide level2 backgroundStandard" data-number="3.9">
+<h2><span class="header-section-number">3.9</span> The modern statistician: a proposal</h2>
+<div class="large">
 <ul>
 <li class="fragment"><p>Uses open source languages</p></li>
 <li class="fragment"><p>Adopts good practices for software development (version control, modular code, tests)</p></li>
@@ -337,44 +408,71 @@ Romain Lesur
 <p>If this is too much for statisticians, we may need to integrate engineers into the business/methods units</p>
 </blockquote></li>
 </ul>
+</div>
+</section></section>
+<section>
+<section id="the-remaining-challenges" class="title-slide slide level1 backgroundTitre_vert center" data-number="4">
+<h1><span class="header-section-number">4</span> The Remaining Challenges</h1>
+
 </section>
-<section id="the-challenges-we-are-still-facing" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>The challenges we are still facing</h2>
-<p>A wall of confusion between statisticians:</p>
+<section id="a-wall-of-confusion-between-statisticians" class="slide level2 backgroundStandard_jaune" data-number="4.1">
+<h2><span class="header-section-number">4.1</span> A wall of confusion between statisticians</h2>
+<div class="large">
 <ul>
-<li class="fragment">some statisticians (mostly managers) see R a new statistical “tool”. <em>They focus on the product, not the process</em> (see Sandra’s keynote).</li>
+<li class="fragment">some statisticians (mostly managers) see R a new statistical “tool”. <em>They focus on the product, not the process</em></li>
 <li class="fragment">other statisticians (mostly the younger ones) see R as a programming language and recognize themselves as developers. <em>They care about the process</em></li>
 <li class="fragment">mass trainings on <a href="https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/">Good Practices with git and R</a> for both R users and managers</li>
 </ul>
+</div>
 </section>
-<section id="the-challenges-we-are-still-facing-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>The challenges we are still facing</h2>
+<section id="the-missing-knowledge-of-statisticians-in-computer-science" class="slide level2 backgroundStandard" data-number="4.2">
+<h2><span class="header-section-number">4.2</span> The missing knowledge of statisticians in computer science</h2>
+<div class="large">
 <p>Statistical trainings in university lack solid basis in computer science:</p>
 <ul>
 <li class="fragment">Academics have become too specialized</li>
 <li class="fragment">Few academics also have a production experience</li>
 <li class="fragment">Inspired by <a href="https://missing.csail.mit.edu/">The Missing Semester of Your CS Education</a>, we have created <a href="https://ensae-reproductibilite.github.io/website/">Bringing Data Science Projects into Production</a> and proposed it to our academic partners</li>
 </ul>
+</div>
+</section></section>
+<section>
+<section id="take-away-messages" class="title-slide slide level1 backgroundTitre_bleu center" data-number="5">
+<h1><span class="header-section-number">5</span> Take-Away Messages</h1>
+
 </section>
-<section id="conclusion" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Conclusion</h2>
+<section id="take-away-messages-1" class="slide level2 backgroundStandard_bleu titreTransparent" data-menu-title="Take-away messages" data-number="5.1">
+<h2><span class="header-section-number">5.1</span> Take-Away Messages</h2>
+<div class="listeSansPuceNiveau1 large">
 <ul>
-<li>Create a community of R users</li>
+<li>Create a community of open-source users</li>
 <li>Invest in mass trainings</li>
 <li>Invest in your IT department</li>
 <li>IT must consider statisticians as (citizen) developers</li>
 <li>Statisticians must also be trained in computer science</li>
 <li>Don’t forget to train the middle management</li>
 </ul>
+</div>
 </section>
-<section id="thanks-questions" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Thanks! Questions?</h1>
+<section id="pageDeFin" class="slide level2 unnumbered backgroundPageFinale" data-menu-title="Page finale">
+<h2></h2>
+<div class="columns coordonneesFinales">
+<div class="column coordonnees" style="width:50%;">
+<ul>
+<li>Romain Lesur</li>
+<li>Head of Data Science Lab</li>
+<li><a href="mailto:romain.lesur@insee.fr" class="email">romain.lesur@insee.fr</a></li>
+</ul>
+</div><div class="column droite" style="width:40%;">
 
-</section>
+</div></div>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="img/licences/cc/png/by-sa.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><strong>4<sup>th</sup> Workshop on Methodologies for Official Statistics</strong></p>
+
 </div>
 </div></div>
 
@@ -385,7 +483,10 @@ Romain Lesur
   <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-confetti/confetti.js"></script>
+  <script src="index_files/libs/revealjs/plugin/verticator/verticator.js"></script>
+  <script src="index_files/libs/revealjs/plugin/multimodal/multimodal.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -407,8 +508,10 @@ Romain Lesur
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true,"theme":"whiteboard"},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":true,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"},{"title":"Plugins","icon":"<i class=\"fa-solid fa-circle-info\"></i>","src":"modulesCompl/customMenu.html"}],"openButton":true,"width":"wide","transitions":true},
+'pointer': {"key":"q","color":"red","pointerSize":16,"alwaysVisible":false},
+'confetti': {"particleCount":50,"angle":90,"spread":45,"startVelocity":45,"decay":0.9,"gravity":1,"drift":0,"ticks":200,"colors":null,"shapes":null,"scalar":1,"zIndex":100,"disableForReducedMotion":false},
+'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -416,10 +519,10 @@ Romain Lesur
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
+        controlsTutorial: true,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
+        controlsLayout: 'bottom-right',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -429,7 +532,7 @@ Romain Lesur
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -470,7 +573,7 @@ Romain Lesur
         rtl: false,
 
         // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
+        navigationMode: 'default',
 
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
@@ -537,11 +640,11 @@ Romain Lesur
         transition: 'none',
 
         // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
+        transitionSpeed: 'slow',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -554,9 +657,9 @@ Romain Lesur
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1920,
 
-        height: 700,
+        height: 1080,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -579,7 +682,7 @@ Romain Lesur
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealPointer, RevealConfetti, Verticator, Multimodal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -588,6 +691,23 @@ Romain Lesur
         ]
       });
     </script>
+    
+
+    <div id="footerPersonnalise">
+      <p>
+          <a target="_blank" href="https://www.insee.fr/fr/accueil"><img src="_extensions/insee-clair/ressources/logos/svg/1_inseeFR_Noir.svg" alt="lien page Insee.fr" title="Page du site de l'Insee" class="logo logo_insee"></a> 
+          <a target="_blank" href="https://bsky.app/profile/insee.fr"><img src="_extensions/insee-clair/ressources/logos/png/logo_bluesky.png" alt="Lien page bluesky Insee" title="Page Bluesky de l'Insee" class="logo"></a> 
+          <a target="_blank" href="https://www.instagram.com/insee_fr/"><img src="_extensions/insee-clair/ressources/logos/png/logo_instagram.jpg" alt="lien page instagram Insee" title="Page Instagram de l'Insee" class="logo"></a> 
+          <a target="_blank" href="https://www.linkedin.com/company/insee?original_referer="><img src="_extensions/insee-clair/ressources/logos/png/logoLinkedIn_rond.png" alt="lien page linkedIn Insee" title="Page linkedIn de l'Insee" class="logo"></a> 
+          <a target="_blank" href="https://x.com/InseeFr"><img src="_extensions/insee-clair/ressources/logos/png/logo_X.png" alt="lien page X Insee" title="Page X de l'Insee" class="logo"></a> 
+          <a target="_blank" href="https://www.youtube.com/channel/UChCCvJTbZEYsCXyfu27eQ6g"><img src="_extensions/insee-clair/ressources/logos/png/logoYoutube_rond.png" alt="lien page youtube Insee" title="Chaîne Youtube de l'Insee" class="logo"></a> 
+          <a target="_blank" href="https://blog.insee.fr/"><img src="_extensions/insee-clair/ressources/logos/png/logo_blog.png" alt="lien blog Insee" title="Blog de l'Insee" class="logo"></a> 
+          <a target="_blank" href="https://www.insee.fr/fr/information/2381941"><img src="_extensions/insee-clair/ressources/logos/png/flux_rss.png" alt="lien flux RSS Insee" title="RSS" class="logo"></a>
+      </p>
+    </div>
+
+    <!--<script src="js/include.js"></script>-->
+    <script src="js/miseEnPage.js"></script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -672,6 +792,11 @@ Romain Lesur
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
             }
           }
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -717,6 +842,158 @@ Romain Lesur
             }
           });
         }
+            let selectedAnnoteEl;
+            const selectorForAnnotation = ( cell, annotation) => {
+              let cellAttr = 'data-code-cell="' + cell + '"';
+              let lineAttr = 'data-code-annotation="' +  annotation + '"';
+              const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+              return selector;
+            }
+            const selectCodeLines = (annoteEl) => {
+              const doc = window.document;
+              const targetCell = annoteEl.getAttribute("data-target-cell");
+              const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+              const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+              const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+              const lineIds = lines.map((line) => {
+                return targetCell + "-" + line;
+              })
+              let top = null;
+              let height = null;
+              let parent = null;
+              if (lineIds.length > 0) {
+                  //compute the position of the single el (top and bottom and make a div)
+                  const el = window.document.getElementById(lineIds[0]);
+                  top = el.offsetTop;
+                  height = el.offsetHeight;
+                  parent = el.parentElement.parentElement;
+                if (lineIds.length > 1) {
+                  const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                  const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                  height = bottom - top;
+                }
+                if (top !== null && height !== null && parent !== null) {
+                  // cook up a div (if necessary) and position it 
+                  let div = window.document.getElementById("code-annotation-line-highlight");
+                  if (div === null) {
+                    div = window.document.createElement("div");
+                    div.setAttribute("id", "code-annotation-line-highlight");
+                    div.style.position = 'absolute';
+                    parent.appendChild(div);
+                  }
+                  div.style.top = top - 2 + "px";
+                  div.style.height = height + 4 + "px";
+                  div.style.left = 0;
+                  let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                  if (gutterDiv === null) {
+                    gutterDiv = window.document.createElement("div");
+                    gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                    gutterDiv.style.position = 'absolute';
+                    const codeCell = window.document.getElementById(targetCell);
+                    const gutter = codeCell.querySelector('.code-annotation-gutter');
+                    gutter.appendChild(gutterDiv);
+                  }
+                  gutterDiv.style.top = top - 2 + "px";
+                  gutterDiv.style.height = height + 4 + "px";
+                }
+                selectedAnnoteEl = annoteEl;
+              }
+            };
+            const unselectCodeLines = () => {
+              const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+              elementsIds.forEach((elId) => {
+                const div = window.document.getElementById(elId);
+                if (div) {
+                  div.remove();
+                }
+              });
+              selectedAnnoteEl = undefined;
+            };
+              // Handle positioning of the toggle
+          window.addEventListener(
+            "resize",
+            throttle(() => {
+              elRect = undefined;
+              if (selectedAnnoteEl) {
+                selectCodeLines(selectedAnnoteEl);
+              }
+            }, 10)
+          );
+          function throttle(fn, ms) {
+          let throttle = false;
+          let timer;
+            return (...args) => {
+              if(!throttle) { // first call gets through
+                  fn.apply(this, args);
+                  throttle = true;
+              } else { // all the others get throttled
+                  if(timer) clearTimeout(timer); // cancel #2
+                  timer = setTimeout(() => {
+                    fn.apply(this, args);
+                    timer = throttle = false;
+                  }, ms);
+              }
+            };
+          }
+            const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+            for (let i=0; i<annoteTargets.length; i++) {
+              const annoteTarget = annoteTargets[i];
+              const targetCell = annoteTarget.getAttribute("data-target-cell");
+              const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+              const contentFn = () => {
+                const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+                if (content) {
+                  const tipContent = content.cloneNode(true);
+                  tipContent.classList.add("code-annotation-tip-content");
+                  return tipContent.outerHTML;
+                }
+              }
+              const config = {
+                allowHTML: true,
+                content: contentFn,
+                onShow: (instance) => {
+                  selectCodeLines(instance.reference);
+                  instance.reference.classList.add('code-annotation-active');
+                  window.tippy.hideAll();
+                },
+                onHide: (instance) => {
+                  unselectCodeLines();
+                  instance.reference.classList.remove('code-annotation-active');
+                },
+                maxWidth: 300,
+                delay: [50, 0],
+                duration: [200, 0],
+                offset: [5, 10],
+                arrow: true,
+                appendTo: function(el) {
+                  return el.parentElement.parentElement.parentElement;
+                },
+                interactive: true,
+                interactiveBorder: 10,
+                theme: 'light-border',
+                placement: 'right',
+                popperOptions: {
+                  modifiers: [
+                  {
+                    name: 'flip',
+                    options: {
+                      flipVariations: false, // true by default
+                      allowedAutoPlacements: ['right'],
+                      fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                    },
+                  },
+                  {
+                    name: 'preventOverflow',
+                    options: {
+                      mainAxis: false,
+                      altAxis: false
+                    }
+                  }
+                  ]        
+                }      
+              };
+              window.tippy(annoteTarget, config); 
+            }
         const findCites = (el) => {
           const parentEl = el.parentElement;
           if (parentEl) {
